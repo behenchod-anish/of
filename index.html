@@ -1,60 +1,41 @@
-<!-- ChatGPT  -->
+
+
+
 
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    /* Set the photo as the background */
-    body, html {
-      height: 100%;
-      margin: 0;
-    }
+<title>Background Music and Image</title>
+<style>
+  /* Full-screen background image */
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
 
-    .bg-image {
-      /* Cover the entire page */
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-      background-image: url('https://behenchod-anish.github.io/of/IMG_3337.jpg'); /* The background image */
-      background-size: cover;
-      background-position: center;
-    }
+  .bg-image {
+    /* The image used */
+    background-image: url('https://behenchod-anish.github.io/of/IMG_3337.jpg');
 
-    /* Hide the video element visually but allow it to play */
-    .bg-audio {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(1px, 1px, 1px, 1px);
-    }
+    /* Full height */
+    height: 100%;
 
-    /* Optional: Style for content on top of the background */
-    .content {
-      position: relative;
-      z-index: 10; /* Ensure the content is above the background */
-      text-align: center;
-      top: 50%;
-      transform: translateY(-50%);
-      color: white;
-    }
-  </style>
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
 </head>
 <body>
 
-<div class="bg-image"></div> <!-- Background image -->
+<div class="bg-image"></div>
 
-<video class="bg-audio" autoplay loop>
-  <source src="https://behenchod-anish.github.io/of/1.mp4" type="video/mp4">
+<audio autoplay loop>
+  <source src="https://behenchod-anish.github.io/of/1.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
-</video>
-
-<div class="content">
-  <h1>Your Content Here</h1>
-  <p>More information or website content goes here.</p>
-</div>
+</audio>
 
 </body>
 </html>
+
