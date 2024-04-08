@@ -1,28 +1,60 @@
 <!-- ChatGPT  -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Background and Music</title>
-<style>
-  /* Set the background image from an external URL */
-  body {
-    background-image: url('https://behenchod-anish.github.io/of/IMG_3337.jpg');
-    background-size: cover; /* Cover the entire page */
-    background-position: center; /* Center the background image */
-    margin: 0; /* Remove default margin */
-    height: 100vh; /* 100% of the viewport height */
-    color: white; /* Set text color */
-  }
-</style>
+  <style>
+    /* Set the photo as the background */
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .bg-image {
+      /* Cover the entire page */
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      background-image: url('https://behenchod-anish.github.io/of/IMG_3337.jpg'); /* The background image */
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Hide the video element visually but allow it to play */
+    .bg-audio {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+    }
+
+    /* Optional: Style for content on top of the background */
+    .content {
+      position: relative;
+      z-index: 10; /* Ensure the content is above the background */
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Audio player that automatically plays music -->
-<audio autoplay loop>
-  <source src="https://behenchod-anish.github.io/of/1.mp4">
-</audio>
+<div class="bg-image"></div> <!-- Background image -->
+
+<video class="bg-audio" autoplay loop>
+  <source src="https://behenchod-anish.github.io/of/1.mp4" type="video/mp4">
+  Your browser does not support the audio element.
+</video>
+
+<div class="content">
+  <h1>Your Content Here</h1>
+  <p>More information or website content goes here.</p>
+</div>
+
 </body>
 </html>
